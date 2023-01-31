@@ -4,17 +4,56 @@ A NodeJS programming challenge.
 
 The goal here is to create a simple web application that allows someone to create a message, view that message at a unique URL, and destroy the message upon viewing it. Just like the title states, this message will self-destruct!
 
-## Step 1: Installation
+## Step 1: ⚙️ Installation and Setup
 
-Fork this repository, clone it, install dependencies, and run it.
+ - <b><u>If you do 🙅NOT have PostgreSQL installed:</u></b>
+    - Install it first here: https://postgresapp.com/
+    - Then, follow the instructions below.
 
-``` bash
-git clone {{your_fork_url_here}}
-npm install
-node app.js
-```
+<br>
 
-## Step 2: Complete the Requirements
+ - <b><u>If you already have 🗄️PostgreSQL installed:</u></b>
+    - Fork this repository, clone it, cd into the project directory, and run the setup.sh shell script to complete the setup:
+
+        ``` bash
+        git clone {{your_fork_url_here}}
+        cd tmwsd_michaeljung
+        sh setup.sh
+        ```
+
+<br>
+
+ - <b><u>If the setup.sh shell script is NOT executing for you 😭, you can follow these instructions:</u></b>
+   - Make sure you're in the project root directory. Install dependencies, then create the environment variables by using .env.example.
+      ``` bash
+      npm install
+      cp .env.example .env
+      ```
+   - Create a user and database using the environment variables in the .env file.
+      ``` bash
+      psql
+      CREATE USER tmwsd_dev WITH PASSWORD 'tmwsd_pw' SUPERUSER;
+      CREATE DATABASE tmwsd_db WITH OWNER tmwsd_dev;
+      \q
+      ```
+   - Cd into the sequelize directory and migrate and seed the database.
+      ``` bash
+      cd sequelize/
+      npx sequelize-cli db:migrate
+      npx sequelize-cli db:seed:all
+      ```
+   - If you ever need to reset the seeds and migration, you can use the following commands to undo the seed and migrations, then re-migrate and re-seed with the above commands. Make sure you are in the sequelize directory before running the commands.
+      ``` bash
+      npx sequelize-cli db:seed:undo:all
+      npx sequelize-cli db:migrate:undo
+      ```
+   - Once everything has been seeded correctly, run it, then open http://localhost:3000/
+      ``` bash
+      npm start
+      ```
+
+
+## Step 2: ✅ Complete the Requirements
 
 Complete the following requirements by using any database engine of your choice. Update this readme by checking the following boxes as you go.
 
@@ -28,6 +67,6 @@ Two more things:
 * Remember to add documentation to your README so the app can be installed and run locally for review.
 * Bonus points for making it look pretty :sparkles:
 
-## Step 3: Submit
+## Step 3: 🚀 Submit
 
 Send an email with a link to your fork when finished. Thanks!
