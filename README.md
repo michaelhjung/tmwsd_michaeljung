@@ -6,6 +6,14 @@ The goal here is to create a simple web application that allows someone to creat
 
 ## Step 1: ⚙️ Installation and Setup
 
+<p>Feel free to watch the 4 minute video walkthrough or use the written instructions below!</p>
+
+### Video Walkthrough:
+<a href="https://youtu.be/ISIF3iUrzN4"><img src="https://i.imgur.com/BlRX21R.png" style="width:450px;" /></a>
+<!-- [![Setup Walkthrough](https://i.imgur.com/BlRX21R.png)](https://youtu.be/ISIF3iUrzN4) -->
+
+
+### Written Walkthrough:
  - <b><u>If you do 🙅NOT have PostgreSQL installed:</u></b>
     - Install it first. Here are some resources:
       - https://www.postgresql.org/download/
