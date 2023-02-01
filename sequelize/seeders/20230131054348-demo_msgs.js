@@ -11,8 +11,8 @@ module.exports = {
             "5... 4... 3... 2... 1...",
             "I need to write down my secret password somewhere safe: secretpassword.",
             "Who let the dogs out?",
-            "I bet you didn't see the secret easter egg console log on the main page.",
-            "Did you look for the console log? Sorry, made you look."
+            "I bet you didn't see the secret easter egg in the browser console.",
+            "Thanks, come again!"
         ];
         for (let i = 0; i < 7; i++) {
             messages.push({

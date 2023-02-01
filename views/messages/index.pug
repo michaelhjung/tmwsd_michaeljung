@@ -2,7 +2,7 @@ doctype html
 html
     head
         link(rel="stylesheet" href="/css/styles.css")
-
+        script(src="/js/scripts.js")
 
     body
         h1(class="main-heading") This Message Will Self Destruct 🧨
@@ -12,7 +12,7 @@ html
             form(class="create-msg-form" method="post" action="/messages")
                 input(type="text" class="form-msg-subject" name="msgSubject" placeholder="Message Subject... (max 35 characters)" maxlength="35" required)
                 textarea(class="form-msg-content" name="msgContent" placeholder="Message content goes here..." rows="8" required)
-                input(type="submit" class="form-submit" value="Create Message")
+                input(type="submit" class="form-submit" value="Create Message" onclick="createMsgNotification()")
 
         section(class="all-messages")
             h2 View Messages Below:

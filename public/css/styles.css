@@ -83,12 +83,16 @@ textarea {
 
 .msg-subject-container {
     margin: 5px;
+    transition: transform 0.5s ease-out;
 }
 .msg-subject-container:first-child {
     margin-top: 0px;
 }
 .msg-subject-container:last-child {
     margin-bottom: 0px;
+}
+.msg-subject-container:hover {
+    transform: scale(1.1);
 }
 
 .msg-subject {
@@ -97,9 +101,6 @@ textarea {
 }
 .msg-subject:hover {
     color: darkred;
-}
-.msg-subject-container:hover {
-    transform: scale(1.1);
 }
 
 .form-submit {
