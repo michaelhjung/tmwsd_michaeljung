@@ -9,7 +9,7 @@ The goal here is to create a simple web application that allows someone to creat
 <p>Feel free to watch the 4 minute video walkthrough or use the written instructions below!</p>
 
 ### Video Walkthrough:
-<a href="https://youtu.be/ISIF3iUrzN4"><img src="https://i.imgur.com/BlRX21R.png" style="width:450px;" /></a>
+<a href="https://youtu.be/ISIF3iUrzN4"><img src="https://i.imgur.com/BlRX21R.png" style="width:450px;" target="_blank" /></a>
 <!-- [![Setup Walkthrough](https://i.imgur.com/BlRX21R.png)](https://youtu.be/ISIF3iUrzN4) -->
 
 
