@@ -14,9 +14,9 @@ module.exports = {
             "I bet you didn't see the secret easter egg console log on the main page.",
             "Did you look for the console log? Sorry, made you look."
         ];
-        for (let i = 1; i < 8; i++) {
+        for (let i = 0; i < 7; i++) {
             messages.push({
-                subject: `Test Message ${i}`,
+                subject: `Test Message ${i + 1}`,
                 content: `${bodyContent[i]}`
             })
         }

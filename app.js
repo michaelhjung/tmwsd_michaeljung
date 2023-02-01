@@ -13,18 +13,18 @@ const connectDb = async () => {
     try {
         await sequelize.authenticate();
         console.log("Database connection established");
-    } catch(e) {
+    } catch (e) {
         console.log("Database connection failed.", e);
         process.exit(1);
     }
 }
 
-(async() => {
+(async () => {
     await connectDb();
     console.log(`Attempting to run server on port ${port}`);
 
     app.listen(port, () => {
-      console.log(`TMWSD is listening at http://localhost:${port}`)
+        console.log(`TMWSD is listening at http://localhost:${port}`);
     });
 })();
 

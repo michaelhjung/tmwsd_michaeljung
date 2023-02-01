@@ -7,31 +7,22 @@ The goal here is to create a simple web application that allows someone to creat
 ## Step 1: ⚙️ Installation and Setup
 
  - <b><u>If you do 🙅NOT have PostgreSQL installed:</u></b>
-    - Install it first here: https://postgresapp.com/
+    - Install it first. Here are some resources:
+      - https://www.postgresql.org/download/
+      - https://postgresapp.com/
     - Then, follow the instructions below.
 
 <br>
 
- - <b><u>If you already have 🗄️PostgreSQL installed:</u></b>
-    - Fork this repository, clone it, cd into the project directory, and run the setup.sh shell script to complete the setup:
-
-        ``` bash
-        git clone {{your_fork_url_here}}
-        cd tmwsd_michaeljung
-        sh setup.sh
-        ```
-
-<br>
-
- - <b><u>If the setup.sh shell script is NOT executing for you 😭, you can follow these instructions:</u></b>
    - Make sure you're in the project root directory. Install dependencies, then create the environment variables by using .env.example.
       ``` bash
       npm install
       cp .env.example .env
       ```
-   - Create a user and database using the environment variables in the .env file.
+   - Create a user and database in PostgreSQL using the environment variables in the .env file.
       ``` bash
       psql
+
       CREATE USER tmwsd_dev WITH PASSWORD 'tmwsd_pw' SUPERUSER;
       CREATE DATABASE tmwsd_db WITH OWNER tmwsd_dev;
       \q
