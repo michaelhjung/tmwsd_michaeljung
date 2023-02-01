@@ -1,1 +1,26 @@
-h1 TMWSD is #{adjective}!
+doctype html
+html
+    head
+        link(rel="stylesheet" href="/css/styles.css")
+
+
+    body
+        h1(class="main-heading") This Message Will Self Destruct 🧨
+
+        section(class="create-msg-container")
+            h2 Create a New Message:
+            form(class="create-msg-form" method="post" action="/messages")
+                input(type="text" class="form-msg-subject" name="msgSubject" placeholder="Message Subject..." required)
+                textarea(class="form-msg-content" name="msgContent" placeholder="Message content goes here..." required)
+                input(type="submit" class="form-submit" value="Create Message")
+
+        section(class="all-messages")
+            h2 View Messages Below:
+            div(class="messages-container")
+                if messages.length > 0
+                    each msg in messages
+                        div(class="msg-subject-container")
+                            a(class="msg-subject" href=`messages/${msg.id}`) #{msg.subject}
+                else
+                    div(class="msg-container")
+                        p(class="no-msgs-text") No messages available yet. Please use the form above to create a new message.
