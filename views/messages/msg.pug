@@ -11,8 +11,10 @@ html
         if message
             h1(class="main-heading") #{message.subject}
 
-            p(class="message-content") #{message.content}
+            div(class="message-content-container")
+                p(class="message-content") #{message.content}
         else
             h1(class="main-heading") Error
 
-            p(class="message-content") Message was not found.
+            div(class="message-content-container")
+                p(class="message-content") Message was not found.

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ---------- CREATE MESSAGES SECTION ---------- */
+.create-msg-container,
+.create-msg-form,
+.all-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-msg-container {
+    border: 1px solid #555;
+    border-radius: 15px;
+    padding: 10px 25px 25px 25px;
+    box-shadow: 3px 3px 8px 0px #777;
+}
+
+.form-msg-subject,
+.form-msg-content {
+    width: 250px;
+    outline: 2px #000;
+    transition: box-shadow 0.5s ease-out;
+}
+.form-msg-subject:focus,
+.form-msg-content:focus {
+    outline: #000;
+    box-shadow: 0px 0px 10px 0px #333;
+}
+
+textarea {
+    resize: none;
+    overflow-y: auto;
+}
+
+.form-submit {
+    margin-top: 20px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #5C6B73;
+    color: #FFF;
+    font-weight: 500;
+}
+
+
+/* ---------- VIEW MESSAGES SECTION ---------- */
+.all-messages {
+    margin-top: 40px;
+}
+
+.msg-subject-container {
+    padding: 5px;
+}
+.msg-subject-container:first-child {
+    padding-top: 0px;
+}
+.msg-subject-container:last-child {
+    padding-bottom: 0px;
+}
+
+.msg-subject {
+    text-decoration: none;
+    color: #000;
+}
+.msg-subject:hover {
+    color: darkred;
+}
+.msg-subject-container:hover {
+    transform: scale(1.1);
+}
+
+.form-submit {
+    padding: 5px 10px;
+    transition: transform 1s ease-out;
+}
+.form-submit:hover {
+    cursor: pointer;
+    background-color: #253237;
+    font-weight: 600;
+    transform: scale(1.05);
+}
+
+
+/* ---------- RETURN HOME BUTTON ---------- */
+.home-button {
+    background-color: #9DB4C0;
+    padding: 15px 30px;
+    border-radius: 4px;
+}
+.home-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+/* ---------- VIEW SINGLE MESSAGE ---------- */
+.message-content-container {
+    max-width: 700px;
+    max-height: 700px;
+    overflow-y: auto;
+}
+.message-content {
+    width: 100%;
+    word-wrap: break-word;
+}
+
+
+/* ---------- 404 NOT FOUND IMAGE ---------- */
+.error-img {
+    object-fit: cover;
+    width: auto;
+    height: 700px;
+    border-radius: 15%;
+}
