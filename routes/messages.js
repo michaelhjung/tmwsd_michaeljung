@@ -27,7 +27,10 @@ router.get('/', async function (req, res) {
 
 // CREATE AND STORE NEW MESSAGE:
 router.post('/messages', async function (req, res) {
-    const { msgSubject, msgContent } = req.body;
+    let { msgSubject, msgContent } = req.body;
+    if (!msgSubject || !msgSubject.trim().length) msgSubject = "(No Subject)";
+    else if (msgSubject.length > 35) msgSubject = "Submitted Subject Was Too Long";
+
     await Message.create({ subject: msgSubject, content: msgContent });
     res.redirect("/");
 });

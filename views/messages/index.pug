@@ -10,7 +10,7 @@ html
         section(class="create-msg-container")
             h2 Create a New Message:
             form(class="create-msg-form" method="post" action="/messages")
-                input(type="text" class="form-msg-subject" name="msgSubject" placeholder="Message Subject..." required)
+                input(type="text" class="form-msg-subject" name="msgSubject" placeholder="Message Subject... (max 35 characters)" required)
                 textarea(class="form-msg-content" name="msgContent" placeholder="Message content goes here..." rows="8" required)
                 input(type="submit" class="form-submit" value="Create Message")
 

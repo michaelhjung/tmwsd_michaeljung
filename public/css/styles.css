@@ -60,6 +60,12 @@ textarea {
     margin-top: 40px;
 }
 
+.messages-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .msg-subject-container {
     padding: 5px;
 }
